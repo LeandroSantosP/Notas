@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Times New Roman", Times, serif, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  min-width: none;
+  min-height: 700px;
+  width: 800px;
+  background-color: #ccc;
+}
+
+.all-content {
+  display: block;
+	margin: 0 auto;
+	border: 10px solid #fff;
+  border-radius: 1rem;
+	width: 100%;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  font-family: "arial", heletica, sans-serif;
+  font-size: 12px;
+  background: #2980b9
+    url("https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png")
+    repeat 0 0;
+
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  -moz-animation: 10s linear 0s normal none infinite animate;
+  -ms-animation: 10s linear 0s normal none infinite animate;
+  -o-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+}
+
+@-webkit-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-moz-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-ms-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-o-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+.heade-all {
+	background-color: rgba(0, 0, 0, 0.164);
+	padding: 1rem 0;
+}
+
+.header {
+  display: flex;
+  height: 40px;
+	margin: 2rem 1rem 2rem 1rem;
+	background-color: rgba(0, 0, 0, 0.103);
+  justify-content: space-around;
+  align-items: center;
+	border: 2px solid #000;
+	border-radius: .5rem;
+	padding: 1rem;
+
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+.header #filder-input {
+  padding: 1rem;
+  width: 100%;
+  margin-left: 10%;
+  background-color: #ccc;
+  color: #000;
+  height: 3px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.fa-magnifying-glass {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.add-note-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.add-note-container #search-add-note {
+  padding: 0.5rem;
+  border: 2px solid #fff;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  margin-right: 1rem;
+  width: 50%;
+}
+
+.add-note-container #search-add-note::placeholder {
+	color: #fff;
+}
+
+.add-note-container button {
+  background-color: #ccc;
+  width: 50px;
+  height: 30px;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(204, 204, 204, 0.329);
+  transition: 0.3s;
+}
+
+.add-note-container button:hover {
+  background-color: transparent;
+}
+
+#container-notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+	justify-content: center;
+  padding:  1rem 2rem 2rem 2rem;
+  gap: 1rem;
+}
+
+.note {
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+
+  background-color: rgba(0, 0, 0, 0.301);
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+}
+
+.note textarea {
+  background-color: transparent;
+  resize: none;
+  color: #fff;
+  border: none;
+  height: 100%;
+  outline: none;
+}
+
+.note i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 0.9rem;
+  padding: 5px;
+  transition: 0.3s;
+  color: #555;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.note .fa-copy,
+.note .fa-xmark,
+.fa-angle-up {
+  font-size: 0.9rem;
+  padding: 5px;
+  transition: 0.3s;
+  color: #555;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.note:hover > i {
+  opacity: 1;
+}
+
+.note .fa-copy {
+  top: 30px;
+}
+
+.note .fa-floppy-disk {
+  top: 50px;
+}
+
+.note .fa-copy:hover,
+.note .fa-xmark:hover,
+.fa-floppy-disk:hover {
+  color: #fff;
+}
+
+.fixed {
+  background-color: #cdd3d62c;
+}
+
+.note .fa-angle-up {
+  right: 40px;
+  color: #000;
+}
+
+.c-loader {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  opacity: 0.8;
+  top: 40%;
+  right: 35%;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
